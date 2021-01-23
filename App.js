@@ -1,17 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { Button,StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
 import 'react-native-gesture-handler';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+
+import { AppView,Button} from './components/index';
+
+import Main from './screens/home';
 
 const Stack = createStackNavigator();
+const Drawer = createDrawerNavigator();
 
-const App = () => {
+const StackApp = () => {
   return (
-    <NavigationContainer>
+    <>
       <Stack.Navigator>
         <Stack.Screen
           name="Home"
@@ -20,39 +26,33 @@ const App = () => {
         />
         <Stack.Screen name="Profile" component={ProfileScreen} />
       </Stack.Navigator>
-    </NavigationContainer>
+    </>
   );
 };
 
-
-// const App = () => {
-//   return (
-//     <NavigationContainer>
-//       {/* Rest of your app code */}
-//       <ScreenA/>
-//     </NavigationContainer>
-//   );
-// };
-
-export default App;
-
-function ScreenA() {
+function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your ScreenA!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Drawer.Navigator initialRouteName="Home">
+        <Drawer.Screen name="Home" component={StackApp} />
+        <Drawer.Screen name="Main" component={Main} />
+      </Drawer.Navigator>
+    </NavigationContainer>
   );
 }
 
+export default App;
+
 const HomeScreen = ({ navigation }) => {
   return (
+    <AppView>
     <Button
       title="Go to Jane's profile"
       onPress={() =>
         navigation.navigate('Profile', { name: 'Jane' })
       }
     />
+    </AppView>
   );
 };
 const ProfileScreen = ({ navigation, route }) => {

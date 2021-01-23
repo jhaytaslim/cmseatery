@@ -1328,6 +1328,14 @@
     query-string "^6.13.6"
     react-is "^16.13.0"
 
+"@react-navigation/drawer@^5.12.2":
+  version "5.12.2"
+  resolved "https://registry.yarnpkg.com/@react-navigation/drawer/-/drawer-5.12.2.tgz#ad5efe2b1dcb97f6e550691b5b505758bdba0757"
+  integrity sha512-fGp9rO33hFX2A24AHdYxNvt4xLfMEUhRsxHym8ZTwp+QXzSVZrD/NDlHVNkSK+pXR49oAxkBHh2qq+s5K9FmKQ==
+  dependencies:
+    color "^3.1.3"
+    react-native-iphone-x-helper "^1.3.0"
+
 "@react-navigation/native@^5.9.0":
   version "5.9.0"
   resolved "https://registry.yarnpkg.com/@react-navigation/native/-/native-5.9.0.tgz#fbea983d7142775b725de59dd18a5a856f26f480"
@@ -1638,6 +1646,13 @@ atob@^2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
+
+axios@^0.21.0:
+  version "0.21.1"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.1.tgz#22563481962f4d6bde9a76d516ef0e5d3c09b2b8"
+  integrity sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==
+  dependencies:
+    follow-redirects "^1.10.0"
 
 babel-plugin-dynamic-import-node@^2.3.3:
   version "2.3.3"
@@ -2126,6 +2141,32 @@ connect@^3.6.5:
     finalhandler "1.1.2"
     parseurl "~1.3.3"
     utils-merge "1.0.1"
+
+contentful-resolve-response@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/contentful-resolve-response/-/contentful-resolve-response-1.3.0.tgz#79530897b109d326c47a32c4b327afa04966cbb7"
+  integrity sha512-FFa4it5VXW1YGyim5rhPbnwmN4c8OcmkpLrsylTL2Y1YpoC+6qnZSSU/QZyvHomLdEgwXaSXhGVJkWjpdz5IMg==
+  dependencies:
+    fast-copy "^2.1.0"
+
+contentful-sdk-core@^6.5.0:
+  version "6.7.0"
+  resolved "https://registry.yarnpkg.com/contentful-sdk-core/-/contentful-sdk-core-6.7.0.tgz#c014f12d7a716548c248e905dd8e095a6dbf7a0f"
+  integrity sha512-+b8UXVE249Z6WzMLXvsu3CIvN/s5xXRZ9o+zY7zDdPkIYBMW15xcs9N2ATI6ncmc+s1uj4XZij/2skflletHiw==
+  dependencies:
+    fast-copy "^2.1.0"
+    qs "^6.9.4"
+
+contentful@^8.1.7:
+  version "8.1.7"
+  resolved "https://registry.yarnpkg.com/contentful/-/contentful-8.1.7.tgz#24786d5eb98118368cafd2a7bf718de9a1f99bae"
+  integrity sha512-dFlpRjkrTp+TG6kCjERIgzsBRTfjflRnjosE0uQus7dENrz2nrVEYhFO/T3WrKQfAbTyozKcTpWr5pEZiXpm2A==
+  dependencies:
+    axios "^0.21.0"
+    contentful-resolve-response "^1.3.0"
+    contentful-sdk-core "^6.5.0"
+    fast-copy "^2.1.0"
+    json-stringify-safe "^5.0.1"
 
 convert-source-map@^1.7.0:
   version "1.7.0"
@@ -2635,6 +2676,11 @@ fancy-log@^1.3.2:
     parse-node-version "^1.0.0"
     time-stamp "^1.0.0"
 
+fast-copy@^2.1.0:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/fast-copy/-/fast-copy-2.1.1.tgz#f5cbcf2df64215e59b8e43f0b2caabc19848083a"
+  integrity sha512-Qod3DdRgFZ8GUIM6ygeoZYpQ0QLW9cf/FS9KhhjlYggcSZXWAemAw8BOCO5LuYCrR3Uj3qXDVTUzOUwG8C7beQ==
+
 fb-watchman@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/fb-watchman/-/fb-watchman-2.0.1.tgz#fc84fb39d2709cf3ff6d743706157bb5708a8a85"
@@ -2778,6 +2824,11 @@ find-up@^5.0.0:
   dependencies:
     locate-path "^6.0.0"
     path-exists "^4.0.0"
+
+follow-redirects@^1.10.0:
+  version "1.13.1"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.13.1.tgz#5f69b813376cee4fd0474a3aba835df04ab763b7"
+  integrity sha512-SSG5xmZh1mkPGyKzjZP8zLjltIfpW32Y5QpdNJyjcfGxK3qo3NDDkZOZSFiGn1A6SclQxY9GzEwAHQ3dmYRWpg==
 
 fontfaceobserver@^2.1.0:
   version "2.1.0"
@@ -3380,6 +3431,11 @@ json-stable-stringify@^1.0.1:
   integrity sha1-mnWdOcXy/1A/1TAGRu1EX4jE+a8=
   dependencies:
     jsonify "~0.0.0"
+
+json-stringify-safe@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz#1296a2d58fd45f19a0f6ce01d65701e2c735b6eb"
+  integrity sha1-Epai1Y/UXxmg9s4B1lcB4sc1tus=
 
 json5@^0.5.1:
   version "0.5.1"
@@ -4525,6 +4581,11 @@ qs@^6.5.0:
   version "6.9.4"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.9.4.tgz#9090b290d1f91728d3c22e54843ca44aea5ab687"
   integrity sha512-A1kFqHekCTM7cz0udomYUoYNWjBebHm/5wzU/XqrBRBNWectVH0QIiN+NEcZ0Dte5hvzHwbr8+XQmguPhJ6WdQ==
+
+qs@^6.9.4:
+  version "6.9.6"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.9.6.tgz#26ed3c8243a431b2924aca84cc90471f35d5a0ee"
+  integrity sha512-TIRk4aqYLNoJUbd+g2lEdz5kLWIuTMRagAXxl78Q0RiVjAOugHmeKNGdd3cwo/ktpf9aL9epCfFqWDEKysUlLQ==
 
 query-string@^6.13.6:
   version "6.13.8"
